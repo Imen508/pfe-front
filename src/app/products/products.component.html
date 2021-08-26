@@ -1,0 +1,32 @@
+<app-sidebarLogin></app-sidebarLogin>
+<app-navbar>  
+</app-navbar>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">orders works!</h1>
+            
+          
+
+
+<div class="row">
+    <div class="col-sm-4" *ngFor="let products of Products">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{products.name}}</h5>
+                <p class="card-text">{{products.description}}</p>
+                <a [routerLink]="['/product-detail/', products.id]" class="btn btn-danger">Check Product</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div><!-- /.col -->
+          
+</div><!-- /.row -->
+</div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->

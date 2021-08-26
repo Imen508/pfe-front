@@ -1,0 +1,92 @@
+<!-- <div id="app">
+        <nav class="navbar navbar-expand navbar-dark bg-dark sb_navbar navbar-expand-lg navbar-light fixed-top"> 
+       
+          <a href="#" class="navbar-brand">
+            <img src="../assets/img1.jpg" width="30" height="30" class="logo-img" alt="Logo">
+            Wamia Express</a>
+          <ul class="navbar-nav mr-auto" routerLinkActive="active">
+            <li class="nav-item">
+              <a href="/home" class="nav-link" routerLink="home">Home </a>
+            </li>
+            <li class="nav-item" *ngIf="showAdminBoard">
+              <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+            </li>
+          
+            <li class="nav-item">
+              <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+              
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+            <li class="nav-item">
+              <a href="/login" class="nav-link" routerLink="login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+            </li>
+            
+          </ul>
+      
+          <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+            <li class="nav-item">
+              <a href class="nav-link" (click)="logout()">LogOut</a>
+            </li>
+          </ul>
+        </nav>
+
+        
+      
+        <div class="container">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+        <footer class="sb_footer">
+          
+          <div class="sb_footer--bottom">
+            <div class="sb_footer--cta-text">
+              <h1 data-px-anchor="-1731492286" data-px-oc="innerHTML::Looking for a fulfillment solution?" >
+                <font style="vertical-align: inherit;" class="h1">
+               <font style="vertical-align: inherit;" >Wamia Express</font>
+             </font></h1>
+             
+             </div>
+            <h3><font style="vertical-align: inherit;" class="h3"><font style="vertical-align: inherit;">Cueilli, emballé et expédié.</font></font></h3>
+            
+            <ul class="sb_footer--social">
+
+            
+            <li>
+             <a href="https://www.facebook.com/LoveWamiaExpress/" onclick="javascript:window.open('https://www.facebook.com/Wamia.tn'); return false;" class="fb">
+            <img src="https://www.shipbob.com/wp-content/uploads/2019/11/facebook-blue.svg" alt="Facebook" class="icon">
+            </a>
+            </li>
+            <br>
+      
+            <li>
+            <a href="https://www.youtube.com/channel/UCyKm9fpP6V9ns84rVClCvMw" onclick="javascript:window.open('https://www.youtube.com/watch?v=6B8uzt8efLQ'); return false;" class="fb">
+            <img src="https://www.shipbob.com/wp-content/uploads/2019/11/youtube-blue.svg" alt="Youtube" class="icon">
+            </a>
+            </li>
+            </ul>
+            <br>
+            <br>
+            <p  class="sb_footer--social">
+              <font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >© Copyright 2021 Wamia Express, Inc. Tous droits réservés. </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >
+              120 N Racine Ave. Suite 100 </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >
+              Chicago, IL 60607</font></font>
+            </p> 
+              </div>
+            
+           
+         
+                
+              </footer>
+
+       
+
+
+        -->
+        
+              <router-outlet></router-outlet>
+      

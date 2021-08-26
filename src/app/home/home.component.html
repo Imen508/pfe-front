@@ -1,0 +1,268 @@
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+ <nav class="navbar navbar-expand navbar-dark bg-dark sb_navbar navbar-expand-lg navbar-light fixed-top"> 
+       
+  <a href="#" class="navbar-brand">
+    <img src="../assets/img1.jpg" width="30" height="30" class="logo-img" alt="Logo">
+    Wamia Express</a>
+  <ul class="navbar-nav mr-auto" routerLinkActive="active">
+    <li class="nav-item">
+      <a href="/home" class="nav-link" routerLink="home">Home </a>
+    </li>
+    <li class="nav-item" *ngIf="showAdminBoard">
+      <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+    </li>
+  
+    <li class="nav-item">
+      <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+      
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+    <li class="nav-item">
+      <a href="login" class="nav-link" routerLink="login">Login</a>
+    </li>
+    <li class="nav-item">
+      <a href="register" class="nav-link" routerLink="register">Sign Up</a>
+    </li>
+    
+  </ul>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+ <div class="body">
+ <div>
+  <br>
+  <br> 
+<h1 class="titre">Cueilli, emballé
+  et expédié.</h1> 
+</div>
+<div class="colonne">
+  <p class="t1">Wamia Express est une plate-forme logistique mondiale qui exécute les commandes de commerce électronique pour les marques destinées directement aux consommateurs. Notre mission est de vous rendre plus performant en ligne en fournissant le meilleur traitement de sa catégorie afin que vos clients bénéficient de la livraison rapide et abordable qu'ils attendent.</p>
+  <p class="t1">Avec des services d'exécution fiables, des entrepôts à proximité de vos clients et une technologie connectée qui alimente notre réseau d'exécution, nous contribuons à améliorer les temps de transit, les frais d'expédition et l'expérience de livraison pour vos clients.</p>
+</div>
+
+<div class="container text-center">
+   <head class="jumbotron">  
+       <p>{{ content }}</p> 
+   </head>
+    
+ <div class="container text-center colonne"> 
+<ngb-carousel >
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper ">
+      <img src="../assets/img8.jpg" alt="" class="im3">
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="../assets/img2.png" alt="">
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="../assets/img3.png" alt="">
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </ng-template>
+</ngb-carousel>
+ </div>
+
+
+ 
+ <div>
+  <img src="../assets/img6.png" class="im2">
+  
+  </div> 
+  <br>
+<br>
+<br>
+
+
+
+
+  <div class="container-fluid">
+    <div class="sb_header --center">
+      <h6>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Comment Ca foncotionne</font>
+          </font>
+      </h6>
+    <h2 class="h2">
+      <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">Comment Wamia Express passe de votre boutique en ligne à la porte de votre client</font>
+      </font>
+    </h2>
+    </div>
+    <section class="section2">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="img-wrap1">
+          <img src="../assets/img10.png" alt="Relier">
+        </div>
+        <h3>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;" >1.Connectez-vous</font>
+            </font>
+        </h3>
+        <p>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Connectez votre boutique,importez vos produits,puis envoyez-nous votre inventaire</font>
+            </font>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <div class="img-wrap1">
+          <img src="../assets/img11.PNG" alt="Relier" data-rjs="2">
+        </div>
+        <h3>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">2.Magasin</font>
+            </font>
+        </h3>
+        <p>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Nous stockons votre inventaire dans n'importe quelle combinaison de nos centres de distribution.</font>
+          </font>
+        </p>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="img-wrap1">
+          <img src="../assets/img12.PNG" alt="Relier" data-rjs="2" >
+        </div>
+        <h3>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">3.Navire</font>
+            </font>
+        </h3>
+        <p >
+          <font style="vertical-align: inherit;" >
+            <font  style="vertical-align: inherit;">Dès qu'un client passe une commande, nous l'expédions depuis le centre de distribution le plus proche.</font>
+            </font>
+        </p>
+      </div>
+    </div>
+  </section>
+  </div>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+
+<div class="container-fluid">
+  <div class="sb_header --center">
+    <h6>
+      <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PRÊT, ENSEMBLE, EXPÉDIER</font></font>
+    </h6>
+<h2 class="h2">
+  <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Traitement simplifié de votre boutique en ligne à la porte de votre client</font></font>
+</h2>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-3">
+    <h4 class="number"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></h4>
+    <p><span style="font-weight: 400;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Connectez votre boutique et envoyez-nous vos produits</font></font></span></p>
+    </div>
+    <div class="col-md-3">
+    <h4 class="number"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></h4>
+    <p><span style="font-weight: 400;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nous stockons votre inventaire en toute sécurité dans nos centres de distribution</font></font></span></p>
+    </div>
+    <div class="col-md-3">
+    <h4 class="number"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></h4>
+    <p><span style="font-weight: 400;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Votre client passe une commande sur votre boutique</font></font></span></p>
+    </div>
+    <div class="col-md-3">
+    <h4 class="number"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></h4>
+    <p><span style="font-weight: 400;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nous sélectionnons, emballons et expédions rapidement la commande à votre client</font></font></span></p>
+    </div>
+    </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+
+
+
+
+<section class="section2">
+<div class="div1"> 
+  <div class="colonne">
+<h1 class="h1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comment </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fonctionne </font><font style="vertical-align: inherit;">Wamia Express</font></font></h1>
+<br>
+<p class="p1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wamia Express est un 3PL doté de la technologie. </font><font style="vertical-align: inherit;">Nous </font></font><span style="font-weight: 400;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">utilisons notre</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> logiciel propriétaire sur l'ensemble de notre réseau d'exécution pour une expérience cohérente. </font><font style="vertical-align: inherit;">Les commandes sont automatiquement envoyées à nos entrepôts, où les stocks sont prélevés, emballés et expédiés à vos clients.</font></font></p>
+<br>
+<p class="p1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nos services de traitement des commandes vous aident à optimiser le temps et les coûts, à utiliser l'expérience de livraison pour dépasser les attentes des clients et à mieux maîtriser la relation client.</font></font></p>
+</div>  
+</div>
+  <div class="img"> 
+  <img src="https://www.shipbob.com/wp-content/uploads/2019/11/product-hero.jpg" alt="Héros du produit" data-rjs="2" class="rounded float-start" >
+  </div>
+</section>
+<footer class="sb_footer">
+          
+  <div class="sb_footer--bottom">
+    <div class="sb_footer--cta-text">
+      <h1 data-px-anchor="-1731492286" data-px-oc="innerHTML::Looking for a fulfillment solution?" >
+        <font style="vertical-align: inherit;" class="h1">
+       <font style="vertical-align: inherit;" >Wamia Express</font>
+     </font></h1>
+     
+     </div>
+    <h3><font style="vertical-align: inherit;" class="h3"><font style="vertical-align: inherit;">Cueilli, emballé et expédié.</font></font></h3>
+    
+    <ul class="sb_footer--social">
+
+    
+    <li>
+     <a href="https://www.facebook.com/LoveWamiaExpress/" onclick="javascript:window.open('https://www.facebook.com/Wamia.tn'); return false;" class="fb">
+    <img src="https://www.shipbob.com/wp-content/uploads/2019/11/facebook-blue.svg" alt="Facebook" class="icon">
+    </a>
+    </li>
+    <br>
+
+    <li>
+    <a href="https://www.youtube.com/channel/UCyKm9fpP6V9ns84rVClCvMw" onclick="javascript:window.open('https://www.youtube.com/watch?v=6B8uzt8efLQ'); return false;" class="fb">
+    <img src="https://www.shipbob.com/wp-content/uploads/2019/11/youtube-blue.svg" alt="Youtube" class="icon">
+    </a>
+    </li>
+    </ul>
+    <br>
+    <br>
+    <p  class="sb_footer--social">
+      <font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >© Copyright 2021 Wamia Express, Inc. Tous droits réservés. </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >
+      120 N Racine Ave. Suite 100 </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >
+      Chicago, IL 60607</font></font>
+    </p> 
+      </div>
+    
+   
+ 
+        
+      </footer>
+
+
+     
+      
+      
+
+  
+     

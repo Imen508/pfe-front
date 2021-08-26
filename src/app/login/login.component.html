@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<nav class="navbar navbar-expand navbar-dark bg-dark sb_navbar navbar-expand-lg navbar-light fixed-top"> 
+       
+  <a href="#" class="navbar-brand">
+    <img src="../assets/img1.jpg" width="30" height="30" class="logo-img" alt="Logo">
+    Wamia Express</a>
+  <ul class="navbar-nav mr-auto" routerLinkActive="active">
+    <li class="nav-item">
+      <a href="/home" class="nav-link" routerLink="home">Home </a>
+    </li>
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a href="register" class="nav-link" routerLink="register">Sign Up</a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+  <section class="text-center" class="section"> 
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-lg-7 px-5 pt-5" >
+            <img src="../assets/img1.jpg" class="img-fluid center" alt="">
+      <form
+        *ngIf="!isLoggedIn"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-row">
+            <div class="col-lg-7 center">
+          <input
+          class="form-control my-3 p-4"
+            type="text"
+            placeholder="username"
+            name="username"
+            [(ngModel)]="form.username"
+            required
+            #username="ngModel"
+          />
+          <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="f.submitted && username.invalid"
+        >
+          Username is required!
+        </div>
+      </div>
+      </div>
+      <div class="form-row" >
+      
+          <div class="col-lg-7 center">
+        <input
+          type="password"
+          class="form-control my-3 p-4"
+          placeholder="password"
+          name="password"
+          [(ngModel)]="form.password"
+          required
+          minlength="6"
+          #password="ngModel"
+        />
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="f.submitted && password.invalid"
+        >
+        <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">
+            Password must be at least 6 characters
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="form-row">
+        <div class="col-lg-7 center">
+        <button class="btn1 " routerLink="user">
+          Login
+        </button>
+      </div>
+      </div>
+      <div class="form-group">
+        <div
+          class="alert alert-danger center"
+          role="alert"
+          *ngIf="f.submitted && isLoginFailed"
+        >
+          Login failed: {{ errorMessage }}
+        </div>
+      </div>
+    </form>
+    </div>
+    </div>
+  </div>
+</section>
+<footer class="sb_footer">
+          
+  <div class="sb_footer--bottom">
+    <div class="sb_footer--cta-text">
+      <h1 data-px-anchor="-1731492286" data-px-oc="innerHTML::Looking for a fulfillment solution?" >
+        <font style="vertical-align: inherit;" class="h1">
+       <font style="vertical-align: inherit;" >Wamia Express</font>
+     </font></h1>
+     
+     </div>
+    <h3><font style="vertical-align: inherit;" class="h3"><font style="vertical-align: inherit;">Cueilli, emballé et expédié.</font></font></h3>
+    
+    <ul class="sb_footer--social">
+
+    
+    <li>
+     <a href="https://www.facebook.com/LoveWamiaExpress/" onclick="javascript:window.open('https://www.facebook.com/Wamia.tn'); return false;" class="fb">
+    <img src="https://www.shipbob.com/wp-content/uploads/2019/11/facebook-blue.svg" alt="Facebook" class="icon">
+    </a>
+    </li>
+    <br>
+
+    <li>
+    <a href="https://www.youtube.com/channel/UCyKm9fpP6V9ns84rVClCvMw" onclick="javascript:window.open('https://www.youtube.com/watch?v=6B8uzt8efLQ'); return false;" class="fb">
+    <img src="https://www.shipbob.com/wp-content/uploads/2019/11/youtube-blue.svg" alt="Youtube" class="icon">
+    </a>
+    </li>
+    </ul>
+    <br>
+    <br>
+    <p  class="sb_footer--social">
+      <font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >© Copyright 2021 Wamia Express, Inc. Tous droits réservés. </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >
+      120 N Racine Ave. Suite 100 </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >
+      Chicago, IL 60607</font></font>
+    </p> 
+      </div>
+    
+   
+ 
+        
+      </footer>
